@@ -24,7 +24,7 @@ public class QuizEntryActivity extends AppCompatActivity {
         findViewById(R.id.start).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuizEntryActivity.this, QuizQuestion1.class);
+                Intent intent = new Intent(QuizEntryActivity.this, MainPageActivity.class);
                 intent.putExtra("user_data", userData);
                 startActivity(intent);
             }

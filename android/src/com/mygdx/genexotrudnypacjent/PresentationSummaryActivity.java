@@ -20,22 +20,22 @@ import butterknife.OnClick;
 /**
  * Created by Radek on 13.07.2016.
  */
-public class QuizQuestion3 extends AppCompatActivity {
+public class PresentationSummaryActivity extends AppCompatActivity {
     private UserData mUserData;
 
-
-
-    @Bind(R.id.input)
-    EditText input;
-
-    @Bind(R.id.next)
-    View next;
+    @OnClick(R.id.main_page)
+    void goToMainPage(View view) {
+        Intent intent = new Intent(this, MainPageActivity.class);
+        intent.putExtra("user_data", mUserData);
+        finish();
+        startActivity(intent);
+    }
 
     @OnClick(R.id.next)
     void onNext(View view) {
-        mUserData.setQuiz_odp3(input.getText().toString());
         gotoNext();
     }
+
     private void gotoNext() {
         //Intent intent = new Intent(this, SendingDataActivity.class);
         Intent intent = new Intent(this, FormActivity.class);
@@ -56,41 +56,8 @@ public class QuizQuestion3 extends AppCompatActivity {
             //	Log.d("user data", mUserData.toString());
         }
 
-        updateDalej();
-        input.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                updateDalej();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
 
     }
 
 
-    void updateDalej() {
-        boolean isOk = false;
-        if(input.getText().length()>5) {
-            isOk = true;
-        } else {
-            isOk = false;
-        }
-
-        if(isOk) {
-            next.setEnabled(true);
-            next.setAlpha(1);
-        } else {
-            next.setEnabled(false);
-            next.setAlpha(0.5f);
-        }
-    }
 }

@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
 
@@ -22,7 +21,6 @@ import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
-import java.util.Date;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -98,7 +96,7 @@ public class SendingDataActivity extends AppCompatActivity {
         try {
             String data_utworzenia = DateFormat.format("yyyy-MM-dd hh:mm:ss", new java.util.Date()).toString();//new Date().toString();
 
-            sendData(userData.getImie(), userData.getNazwisko(), userData.getTelefon(), userData.getStanowisko(), userData.getEmail(), userData.getCheck1(), userData.getCheck2(), userData.getCheck3(),
+            sendData(userData.getImie(), userData.getNazwisko(), userData.getTelefon(), userData.getQuiz_odp4(), userData.getEmail(), userData.getCheck1(), userData.getCheck2(), userData.getCheck3(),
                     userData.getQuiz_odp1(), userData.getQuiz_odp2(), userData.getQuiz_odp3(),
                     row.nazwa_apteki, row.ulica, row.miasto, row.wojewodztwo, row.nazwisko_przedstawiciela, row.imie_przedstawiciela, row.rks_nazwisko, row.rks_imie, data_utworzenia);
         } catch (Exception e) {

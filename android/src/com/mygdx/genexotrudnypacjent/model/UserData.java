@@ -60,11 +60,11 @@ public class UserData implements Serializable {
         this.quiz_odp3 = quiz_odp3;
     }
 
-    public String getStanowisko() {
+    public String getQuiz_odp4() {
         return stanowisko;
     }
 
-    public void setStanowisko(String stanowisko) {
+    public void getQuiz_odp4(String stanowisko) {
         this.stanowisko = stanowisko;
     }
 

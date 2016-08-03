@@ -13,7 +13,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.mygdx.genexotrudnypacjent.R;
 import com.mygdx.genexotrudnypacjent.database.DatabaseHelper;
 import com.mygdx.genexotrudnypacjent.dialog.ChooseElementDialog;
 import com.mygdx.genexotrudnypacjent.dialog.ChooseStanowiskoDialog;
@@ -54,7 +53,7 @@ public class FormActivity extends AppCompatActivity {
                 ) {
             if(mCheck1.isChecked() == true && mCheck2.isChecked() == true) {
                 userData.setUserData(mImie.getText().toString(), mNazwisko.getText().toString(), mTelefon.getText().toString(), mEmail.getText().toString(), mCheck1.isChecked(), mCheck2.isChecked(), mCheck3.isChecked());
-                //Intent intent = new Intent(this, QuizQuestion1.class);
+                //Intent intent = new Intent(this, MainPageActivity.class);
                 Intent intent = new Intent(this, SendingDataActivity.class);
                 intent.putExtra("user_data", userData);
                 startActivity(intent);
@@ -255,7 +254,7 @@ public class FormActivity extends AppCompatActivity {
                         mEmail.setEnabled(true);
 
 
-                        userData.setStanowisko(row);
+                        userData.getQuiz_odp4(row);
                     }
                 }.show(getSupportFragmentManager(), "tag");
             }
