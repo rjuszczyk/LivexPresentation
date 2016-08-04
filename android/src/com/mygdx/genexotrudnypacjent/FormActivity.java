@@ -47,7 +47,7 @@ public class FormActivity extends AppCompatActivity {
     @OnClick(R.id.dalej)
     void onDalej(View v) {
         if(mImie.isEnabled() && mImie.getText().length()>0 ) {
-            userData.setUserData(mImie.getText().toString(), "", "", "", true, true, true);
+            userData.setUserData(mImie.getText().toString());
             //Intent intent = new Intent(this, MainPageActivity.class);
             Intent intent = new Intent(this, SendingDataActivity.class);
             intent.putExtra("user_data", userData);
@@ -74,6 +74,15 @@ public class FormActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         userData = (UserData) getIntent().getSerializableExtra("user_data");
+
+        if(savedInstanceState == null) {
+            long start = Long.parseLong(userData.getNazwisko());
+            long current = System.currentTimeMillis();
+            userData.setEmail(String.valueOf(current));
+            long seconds = (current - start)/1000;
+            userData.setCheck1(String.valueOf(seconds));
+        }
+
         setContentView(R.layout.form_activity);
 
         ButterKnife.bind(this);

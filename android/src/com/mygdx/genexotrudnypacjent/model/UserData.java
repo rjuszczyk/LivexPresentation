@@ -10,9 +10,22 @@ public class UserData implements Serializable {
     String imie = "";
     String nazwisko  = "";;
     String telefon  = "";;
-    String stanowisko  = "";;
+    String stanowisko  = "";
+
+    public UserData () {
+        nazwisko = String.valueOf(System.currentTimeMillis());
+    }
+
     public Row getRow() {
         return row;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setCheck1(String check1) {
+        this.check1 = check1;
     }
 
     public String getEmail() {
@@ -76,14 +89,8 @@ public class UserData implements Serializable {
         this.row = row;
     }
 
-    public void setUserData(String imie, String nazwisko, String telefon, String email, boolean ch1, boolean ch2, boolean ch3) {
+    public void setUserData(String imie) {
         this.imie = imie;
-        this.nazwisko = nazwisko;
-        this.telefon = telefon;
-        this.email = email;
-        check1 = ch1 ? "tak" : "nie";
-        check2 = ch2 ? "tak" : "nie";
-        check3 = ch3 ? "tak" : "nie";
     }
 
     public String toString() {
