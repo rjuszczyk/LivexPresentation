@@ -23,11 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5 ankiet czeka na wyslanie"/>
-        <Button
-            android:id="@+id/send"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="wyslij"/>
+
 
         <ProgressBar
             android:id="@+id/progress_bar"

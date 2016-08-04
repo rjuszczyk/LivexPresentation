@@ -34,6 +34,7 @@ public class StartActivity extends AppCompatActivity {
 
 
     void trySend(View v){
+       // finish();
         startActivity(new Intent(this, ResendActivity.class));
     }
 

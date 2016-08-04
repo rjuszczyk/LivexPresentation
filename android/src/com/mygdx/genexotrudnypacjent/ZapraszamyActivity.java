@@ -54,10 +54,7 @@ public class ZapraszamyActivity extends AppCompatActivity {
         List<NotSendUser> notSendUsers = cupboard().withDatabase(DbRepository.getDb(this)).query(NotSendUser.class).list();
 
         int count = notSendUsers.size();
-        if(count>0)
-            trySendText.setText("" + count + " - ilość ankiet czekających na wysłanie, kliknij tutaj aby je wysłać");
-        else
-            trySendText.setText("");
+
         super.onResume();
     }
 }

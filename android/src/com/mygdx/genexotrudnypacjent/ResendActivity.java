@@ -86,7 +86,7 @@ public class ResendActivity extends AppCompatActivity {
             notSendUsers = cupboard().withDatabase(DbRepository.getDb(this)).query(NotSendUser.class).list();
 
             int count = notSendUsers.size();
-            info.setText("" + count + " - ilość ankiet czekających na wysłanie");
+            //info.setText("" + count + " - ilość ankiet czekających na wysłanie");
 
             dalej();
         }
@@ -94,10 +94,12 @@ public class ResendActivity extends AppCompatActivity {
 
     void dalej() {
         if(!SharedPreferencesUtils.isStoreIndexInserted(this)) {
+            finish();
             startActivity(new Intent(this, DataActivity.class));
         } else {
             //Intent intent = new Intent(this, FormActivity.class);
             Intent intent = new Intent(this, QuizEntryActivity.class);
+            finish();
             startActivity(intent);
         }
     }
