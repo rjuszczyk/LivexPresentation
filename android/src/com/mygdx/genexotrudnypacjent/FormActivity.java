@@ -40,58 +40,29 @@ public class FormActivity extends AppCompatActivity {
     @Bind(R.id.apteka)
     TextView mApteka;
 
-    @Bind(R.id.stanowisko)
-    TextView mStanopwisko;
+
 
     @Bind(R.id.dalej)
     View mQuiz;
     @OnClick(R.id.dalej)
     void onDalej(View v) {
-        if(mImie.isEnabled() && mImie.getText().length()>0 &&
-                mNazwisko.getText().length()>0
-                && (mTelefon.getText().length()>0  || mEmail.getText().length()>0 )
-                ) {
-            if(mCheck1.isChecked() == true && mCheck2.isChecked() == true) {
-                userData.setUserData(mImie.getText().toString(), mNazwisko.getText().toString(), mTelefon.getText().toString(), mEmail.getText().toString(), mCheck1.isChecked(), mCheck2.isChecked(), mCheck3.isChecked());
-                //Intent intent = new Intent(this, MainPageActivity.class);
-                Intent intent = new Intent(this, SendingDataActivity.class);
-                intent.putExtra("user_data", userData);
-                startActivity(intent);
-            } else {
-                Toast.makeText(this, "Musisz zaakceptować regulamin i wyrazić zgodę na przetwarzanie danych osobowych.", Toast.LENGTH_SHORT).show();
-            }
+        if(mImie.isEnabled() && mImie.getText().length()>0 ) {
+            userData.setUserData(mImie.getText().toString(), "", "", "", true, true, true);
+            //Intent intent = new Intent(this, MainPageActivity.class);
+            Intent intent = new Intent(this, SendingDataActivity.class);
+            intent.putExtra("user_data", userData);
+            finish();
+            startActivity(intent);
         } else {
             Toast.makeText(this, "Uzupełnij wszystkie dane!", Toast.LENGTH_SHORT).show();
         }
-
     }
 
 
-    @OnClick(R.id.regulamin)
-    void onRegulamin(View veiw) {
-        startActivity(new Intent(this, RegulaminActivity.class));
-    }
 
     @Bind(R.id.imie)
     EditText mImie;
 
-    @Bind(R.id.nazwisko)
-    EditText mNazwisko;
-
-    @Bind(R.id.telefon)
-    EditText mTelefon;
-
-    @Bind(R.id.email)
-    EditText mEmail;
-
-    @Bind(R.id.check1)
-    CheckBox mCheck1;
-
-    @Bind(R.id.check2)
-    CheckBox mCheck2;
-
-    @Bind(R.id.check3)
-    CheckBox mCheck3;
 
     String imie_przedstawiciela;
     String nazwisko_przedstawiciela;
@@ -115,11 +86,8 @@ public class FormActivity extends AppCompatActivity {
 
         mMiasto.setEnabled(false);
         mApteka.setEnabled(false);
-        mStanopwisko.setEnabled(false);
+
         mImie.setEnabled(false);
-        mNazwisko.setEnabled(false);
-        mTelefon.setEnabled(false);
-        mEmail.setEnabled(false);
 
         mPrzedstawicielMedyczny.setOnClickListener(new View.OnClickListener() {
 
@@ -145,15 +113,13 @@ public class FormActivity extends AppCompatActivity {
                         mMiasto.setEnabled(true);
                         mMiasto.setText("Miasto");
                         mApteka.setText("Apteka");
-                        mStanopwisko.setText("Stanowisko");
+
 
 
                         mApteka.setEnabled(false);
-                        mStanopwisko.setEnabled(false);
+
                         mImie.setEnabled(false);
-                        mNazwisko.setEnabled(false);
-                        mTelefon.setEnabled(false);
-                        mEmail.setEnabled(false);
+
                     }
                 }.show(getSupportFragmentManager(), "tag");
             }
@@ -184,12 +150,10 @@ public class FormActivity extends AppCompatActivity {
 
                         mApteka.setEnabled(true);
                         mApteka.setText("Apteka");
-                        mStanopwisko.setText("Stanowisko");
+
 
                         mImie.setEnabled(false);
-                        mNazwisko.setEnabled(false);
-                        mTelefon.setEnabled(false);
-                        mEmail.setEnabled(false);
+
                     }
                 }.show(getSupportFragmentManager(), "tag");
             }
@@ -220,13 +184,11 @@ public class FormActivity extends AppCompatActivity {
                     public void onRowSelected(Row row) {
                         nazwa_apteki = row.nazwa_apteki;
                         mApteka.setText(nazwa_apteki);
-                        mStanopwisko.setEnabled(true);
-                        mStanopwisko.setText("Stanowisko");
 
-                        mImie.setEnabled(false);
-                        mNazwisko.setEnabled(true);
-                        mTelefon.setEnabled(true);
-                        mEmail.setEnabled(true);
+
+
+                        mImie.setEnabled(true);
+
 
 
                         userData.setRow(row);
@@ -235,52 +197,17 @@ public class FormActivity extends AppCompatActivity {
             }
         });
 
-        mStanopwisko.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                new ChooseStanowiskoDialog() {
-
-
-
-                    @Override
-                    public void onRowSelected(String row) {
-
-                        mStanopwisko.setText(row);
-
-                        mImie.setEnabled(true);
-                        mNazwisko.setEnabled(true);
-                        mTelefon.setEnabled(true);
-                        mEmail.setEnabled(true);
-
-
-                        userData.getQuiz_odp4(row);
-                    }
-                }.show(getSupportFragmentManager(), "tag");
-            }
-        });
 
 
         mImie.addTextChangedListener(mTextWatcher);
-        mNazwisko.addTextChangedListener(mTextWatcher);
-        mTelefon.addTextChangedListener(mTextWatcher);
-        mEmail.addTextChangedListener(mTextWatcher);
 
-        mCheck1.setOnCheckedChangeListener(mOnCheckCahangeListener);
-        mCheck2.setOnCheckedChangeListener(mOnCheckCahangeListener);
-        mCheck3.setOnCheckedChangeListener(mOnCheckCahangeListener);
     }
 
     private void checkConditions() {
-        if(mImie.isEnabled() && mImie.getText().length()>0 &&
-                mNazwisko.getText().length()>0
-                && (mTelefon.getText().length()>0  || mEmail.getText().length()>0 )
-                ) {
-            if(mCheck1.isChecked() == true && mCheck2.isChecked() == true) {
-                mQuiz.setAlpha(1);
-            } else {
-                mQuiz.setAlpha(0.5f);
-            }
+        if(mImie.isEnabled() && mImie.getText().length()>0) {
+            mQuiz.setAlpha(1);
+
         } else {
             mQuiz.setAlpha(0.5f);
         }

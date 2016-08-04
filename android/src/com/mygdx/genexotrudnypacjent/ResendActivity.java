@@ -4,6 +4,7 @@ package com.mygdx.genexotrudnypacjent;
  * Created by Radek on 03.04.2016.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 import com.mygdx.genexotrudnypacjent.database.DbRepository;
 import com.mygdx.genexotrudnypacjent.model.NotSendUser;
+import com.mygdx.genexotrudnypacjent.util.SharedPreferencesUtils;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -38,13 +40,6 @@ public class ResendActivity extends AppCompatActivity {
     @Bind(R.id.info)
     TextView info;
 
-    @Bind(R.id.send)
-    Button send;
-
-    @OnClick(R.id.send)
-    void send(View v) {
-        trySend();
-    }
 
     @Bind(R.id.progress_bar)
     View progressBar;
@@ -58,19 +53,21 @@ public class ResendActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         progressBar.setVisibility(View.GONE);
-        send.setVisibility(View.VISIBLE);
+
         info.setVisibility(View.VISIBLE);
 
         notSendUsers = cupboard().withDatabase(DbRepository.getDb(this)).query(NotSendUser.class).list();
 
         int count = notSendUsers.size();
         info.setText("" + count + " - ilość ankiet czekających na wysłanie");
+
+        trySend();
     }
     int current = 0;
     public void trySend() {
 
         progressBar.setVisibility(View.VISIBLE);
-        send.setVisibility(View.GONE);
+
         info.setVisibility(View.GONE);
 
         if(current < notSendUsers.size()) {
@@ -83,26 +80,41 @@ public class ResendActivity extends AppCompatActivity {
             }).start();
         } else {
             progressBar.setVisibility(View.GONE);
-            send.setVisibility(View.VISIBLE);
+
             info.setVisibility(View.VISIBLE);
 
             notSendUsers = cupboard().withDatabase(DbRepository.getDb(this)).query(NotSendUser.class).list();
 
             int count = notSendUsers.size();
             info.setText("" + count + " - ilość ankiet czekających na wysłanie");
+
+            dalej();
         }
     }
+
+    void dalej() {
+        if(!SharedPreferencesUtils.isStoreIndexInserted(this)) {
+            startActivity(new Intent(this, DataActivity.class));
+        } else {
+            //Intent intent = new Intent(this, FormActivity.class);
+            Intent intent = new Intent(this, QuizEntryActivity.class);
+            startActivity(intent);
+        }
+    }
+
     void onSuccess() {
         current++;
         trySend();
     }
     void onFail() {
         progressBar.setVisibility(View.GONE);
-        send.setVisibility(View.VISIBLE);
+
         info.setVisibility(View.VISIBLE);
 
         notSendUsers = cupboard().withDatabase(DbRepository.getDb(this)).query(NotSendUser.class).list();
         Toast.makeText(this, "Błąd podczas wysyłania", Toast.LENGTH_SHORT).show();
+
+        dalej();
     }
 
     public void sendData(NotSendUser notSendUser) {

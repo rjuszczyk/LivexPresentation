@@ -7,10 +7,10 @@ import java.io.Serializable;
  */
 public class UserData implements Serializable {
     Row row;
-    String imie;
-    String nazwisko;
-    String telefon;
-    String stanowisko;
+    String imie = "";
+    String nazwisko  = "";;
+    String telefon  = "";;
+    String stanowisko  = "";;
     public Row getRow() {
         return row;
     }
@@ -31,10 +31,10 @@ public class UserData implements Serializable {
         return check3;
     }
 
-    String email;
-    String check1;
-    String check2;
-    String check3;
+    String email  = "";;
+    String check1  = "";;
+    String check2  = "";;
+    String check3  = "";;
 
     public String getQuiz_odp1() {
         return quiz_odp1;
@@ -64,13 +64,13 @@ public class UserData implements Serializable {
         return stanowisko;
     }
 
-    public void getQuiz_odp4(String stanowisko) {
+    public void setQuiz_odp4(String stanowisko) {
         this.stanowisko = stanowisko;
     }
 
-    String quiz_odp1;
-    String quiz_odp2;
-    String quiz_odp3;
+    String quiz_odp1  = "";;
+    String quiz_odp2  = "";;
+    String quiz_odp3  = "";;
 
     public void setRow(Row row) {
         this.row = row;

@@ -128,8 +128,6 @@ public class DataActivity extends AppCompatActivity {
             Intent intent = new Intent(this, QuizEntryActivity.class);
             finish();
             startActivity(intent);
-
         }
-
     }
 }

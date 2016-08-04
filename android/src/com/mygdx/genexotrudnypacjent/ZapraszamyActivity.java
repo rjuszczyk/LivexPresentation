@@ -44,6 +44,9 @@ public class ZapraszamyActivity extends AppCompatActivity {
         setContentView(R.layout.zapraszamy_activity);
 
         ButterKnife.bind(this);
+
+        startActivity(new Intent(this, QuizEntryActivity.class));
+        finish();
     }
 
     @Override

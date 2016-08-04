@@ -35,15 +35,13 @@ public class PodiumActivity extends AppCompatActivity {
         }
 
 
-        findViewById(R.id.container).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent startIntent = new Intent(PodiumActivity.this, ZapraszamyActivity.class);
-                startIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(startIntent);
-            }
-        });
+
+        Intent startIntent = new Intent(PodiumActivity.this, ZapraszamyActivity.class);
+        startIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        finish();
+        startActivity(startIntent);
+
 
     }
 

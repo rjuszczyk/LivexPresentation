@@ -31,26 +31,12 @@ import static nl.qbusict.cupboard.CupboardFactory.cupboard;
  * Created by Radek on 2016-02-26.
  */
 public class StartActivity extends AppCompatActivity {
-        @OnClick(R.id.multilac)
-        void dalej(View v) {
-            if(!SharedPreferencesUtils.isStoreIndexInserted(this)) {
-                startActivity(new Intent(this, DataActivity.class));
-            } else {
-                //Intent intent = new Intent(this, FormActivity.class);
-                Intent intent = new Intent(this, QuizEntryActivity.class);
-                startActivity(intent);
-            }
-        }
-        @OnClick(R.id.regulamin)
-        void regulamin(View v) {
-            startActivity(new Intent(this, RegulaminActivity.class));
-        }
-        @OnClick(R.id.try_send)
-        void trySend(View v){
-            startActivity(new Intent(this, ResendActivity.class));
-        }
-        @Bind(R.id.try_send)
-        TextView trySendText;
+
+
+    void trySend(View v){
+        startActivity(new Intent(this, ResendActivity.class));
+    }
+
 
     @Bind(R.id.update)
     TextView mUpdate;
@@ -71,7 +57,6 @@ public class StartActivity extends AppCompatActivity {
 
             DbRepository.getDb(this);
             mUpdate.setVisibility(View.VISIBLE);
-
         }
 
         @Override
@@ -80,9 +65,17 @@ public class StartActivity extends AppCompatActivity {
 
             int count = notSendUsers.size();
             if(count>0)
-                trySendText.setText("" + count + " - ilość ankiet czekających na wysłanie, kliknij tutaj aby je wysłać");
-            else
-                trySendText.setText("");
+                trySend(null);
+            else {
+                if(!SharedPreferencesUtils.isStoreIndexInserted(this)) {
+                    startActivity(new Intent(this, DataActivity.class));
+                } else {
+                    //Intent intent = new Intent(this, FormActivity.class);
+                    Intent intent = new Intent(this, QuizEntryActivity.class);
+                    startActivity(intent);
+                }
+            }
+
             super.onResume();
         }
 
