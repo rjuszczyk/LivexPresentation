@@ -19,7 +19,7 @@ public class MainPageActivity extends AppCompatActivity {
 
     @OnClick(R.id.next)
     void onNext(View view) {
-        mUserData.setQuiz_odp1("test");
+        mUserData.setQuiz_odp1("tak");
 
         finish();
         BasePresentationActivity.start(this, R.layout.question1, mUserData);
@@ -27,7 +27,7 @@ public class MainPageActivity extends AppCompatActivity {
 
     @OnClick(R.id.next2)
     void onNext2(View view) {
-        mUserData.setQuiz_odp2("test");
+        mUserData.setQuiz_odp2("tak");
         finish();
         BasePresentationActivity.start(this, R.layout.question2, mUserData);
     }
@@ -35,7 +35,7 @@ public class MainPageActivity extends AppCompatActivity {
 
     @OnClick(R.id.next3)
     void onNext3(View view) {
-        mUserData.setQuiz_odp3("test");
+        mUserData.setQuiz_odp3("tak");
 
         finish();
         BasePresentationActivity.start(this, R.layout.question3, mUserData);
@@ -44,7 +44,7 @@ public class MainPageActivity extends AppCompatActivity {
 
     @OnClick(R.id.next4)
     void onNext4(View view) {
-        mUserData.setQuiz_odp4("test");
+        mUserData.setQuiz_odp4("tak");
 
         finish();
         BasePresentationActivity.start(this, R.layout.question4, mUserData);
