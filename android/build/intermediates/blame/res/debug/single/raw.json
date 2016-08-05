@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\Android\\LivexPresentation\\android\\build\\intermediates\\res\\merged\\debug\\raw\\brawo.wav",
+        "source": "C:\\Users\\Radek\\Documents\\Android\\LivexPresentation\\android\\res\\raw\\brawo.wav"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\Android\\LivexPresentation\\android\\build\\intermediates\\res\\merged\\debug\\raw\\positive.wav",
+        "source": "C:\\Users\\Radek\\Documents\\Android\\LivexPresentation\\android\\res\\raw\\positive.wav"
+    },
+    {
+        "merged": "C:\\Users\\Radek\\Documents\\Android\\LivexPresentation\\android\\build\\intermediates\\res\\merged\\debug\\raw\\negative.wav",
+        "source": "C:\\Users\\Radek\\Documents\\Android\\LivexPresentation\\android\\res\\raw\\negative.wav"
+    }
+]
