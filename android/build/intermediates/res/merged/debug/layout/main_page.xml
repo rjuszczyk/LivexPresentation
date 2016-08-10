@@ -17,14 +17,14 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center_horizontal|bottom"
-			android:layout_marginBottom="32dp"
+			android:layout_marginBottom="66dp"
 			android:src="@drawable/_1"
 			/>
 	<LinearLayout
 		android:layout_width="942px"
 		android:layout_height="542px"
 		android:layout_gravity="center_horizontal|bottom"
-		android:layout_marginBottom="32dp"
+		android:layout_marginBottom="52dp"
 		android:orientation="vertical">
 		<LinearLayout
 			android:layout_width="match_parent"
@@ -69,6 +69,20 @@
 				/>
 		</LinearLayout>
 	</LinearLayout>
+
+	<TextView
+		android:id="@+id/przejdz"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="PRZEKAZ"
+		android:layout_gravity="bottom|right"
+		android:layout_marginRight="35dp"
+		android:layout_marginBottom="14dp"
+		android:gravity="center"
+		android:textColor="#FFF"
+		android:textSize="23sp"
+
+		android:background="@drawable/button_bg"/>
 </FrameLayout>
 
 

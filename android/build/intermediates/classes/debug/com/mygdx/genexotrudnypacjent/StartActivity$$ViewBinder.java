@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class StartActivity$$ViewBinder<T extends com.mygdx.genexotrudnypacjent.StartActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558544, "field 'mUpdate' and method 'openUpdate'");
-    target.mUpdate = finder.castView(view, 2131558544, "field 'mUpdate'");
+    view = finder.findRequiredView(source, 2131558545, "field 'mUpdate' and method 'openUpdate'");
+    target.mUpdate = finder.castView(view, 2131558545, "field 'mUpdate'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

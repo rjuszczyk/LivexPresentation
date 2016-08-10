@@ -1,5 +1,6 @@
 package com.mygdx.genexotrudnypacjent;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,14 @@ import butterknife.OnClick;
 public class MainPageActivity extends AppCompatActivity {
     private UserData mUserData;
 
+    @OnClick(R.id.przejdz)
+    void onPrzejdz(View view) {
+        Intent intent = new Intent(this, PresentationSummaryActivity.class);
+        intent.putExtra("user_data", mUserData);
+
+        finish();
+        startActivity(intent);
+    }
 
     @OnClick(R.id.next)
     void onNext(View view) {

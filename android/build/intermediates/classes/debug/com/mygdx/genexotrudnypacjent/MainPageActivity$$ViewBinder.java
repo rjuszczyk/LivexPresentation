@@ -8,6 +8,15 @@ import butterknife.ButterKnife.ViewBinder;
 public class MainPageActivity$$ViewBinder<T extends com.mygdx.genexotrudnypacjent.MainPageActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
+    view = finder.findRequiredView(source, 2131558527, "method 'onPrzejdz'");
+    view.setOnClickListener(
+      new butterknife.internal.DebouncingOnClickListener() {
+        @Override public void doClick(
+          android.view.View p0
+        ) {
+          target.onPrzejdz(p0);
+        }
+      });
     view = finder.findRequiredView(source, 2131558523, "method 'onNext'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {

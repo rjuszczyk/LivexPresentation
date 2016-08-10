@@ -8,7 +8,7 @@ import butterknife.ButterKnife.ViewBinder;
 public class BasePresentationActivity$$ViewBinder<T extends com.mygdx.genexotrudnypacjent.BasePresentationActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558540, "method 'goToMainPage'");
+    view = finder.findRequiredView(source, 2131558541, "method 'goToMainPage'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(

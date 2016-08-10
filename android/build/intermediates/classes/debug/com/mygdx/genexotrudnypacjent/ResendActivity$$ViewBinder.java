@@ -8,9 +8,9 @@ import butterknife.ButterKnife.ViewBinder;
 public class ResendActivity$$ViewBinder<T extends com.mygdx.genexotrudnypacjent.ResendActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131558538, "field 'info'");
-    target.info = finder.castView(view, 2131558538, "field 'info'");
-    view = finder.findRequiredView(source, 2131558542, "field 'progressBar'");
+    view = finder.findRequiredView(source, 2131558539, "field 'info'");
+    target.info = finder.castView(view, 2131558539, "field 'info'");
+    view = finder.findRequiredView(source, 2131558543, "field 'progressBar'");
     target.progressBar = view;
   }
 
