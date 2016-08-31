@@ -1,3 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\core\build\libs\core-1.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="9e1483dbe8516ba9e7ca1551f2878b3872a845db">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\core-1.0_e5bffa79e94e5c0fcc04570f5765505e12972fb8.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.0.0-beta4\739e00dea1f0ac04fdb9b6160d667e23cc50a791\retrofit-2.0.0-beta4.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="739e00dea1f0ac04fdb9b6160d667e23cc50a791">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\retrofit-2.0.0-beta4_ad658a02fbd39b1f89af4876dca9e2482ab4dc4e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\.gradle\caches\modules-2\files-2.1\nl.qbusict\cupboard\2.1.4\ba5bc66fad1fc20aeb8a74f0013b04185fd9a3a9\cupboard-2.1.4.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ba5bc66fad1fc20aeb8a74f0013b04185fd9a3a9">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\cupboard-2.1.4_0c5ccf735a30a84d99a39c893fc811c7917da8b5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.0.1_fa6b61279e8f460f9b28fc200e0b2c9c08c2168b.jar" />
+    </item>
+    <item
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\support-annotations-23.0.1_6caa1fe4da30cf2cc1676a54cb9890359b7ae5e4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-backend-android\1.9.2\342b830bc718dc1965c8f13fc58dc500e8bd262f\gdx-backend-android-1.9.2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="342b830bc718dc1965c8f13fc58dc500e8bd262f">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\gdx-backend-android-1.9.2_ebf0abe2368b5b37b0c32d0bc8ef6998b4532e64.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.0.1_cd48ca13999a329dcffa58ec3bda2dcba7675a1f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.0.1\b34c1f2d993044656e87f88970b6818e99e886ba\okhttp-3.0.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="b34c1f2d993044656e87f88970b6818e99e886ba">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\okhttp-3.0.1_9e40253ba088b317fb93540479dc17ef74fe4c39.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\internal_impl-23.0.1_39c043b6351c65d0e5ed1fdff1ea45f9e1ef7078.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx\1.9.2\e641cb91bec06bc64d9ddf7a7d7062caceec73cd\gdx-1.9.2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e641cb91bec06bc64d9ddf7a7d7062caceec73cd">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\gdx-1.9.2_4aa43217e07a3d6cb2427650bc0b91d9b56f9e24.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.5.0\4de2b4ed3445c37ec1720a7d214712e845a24636\okhttp-2.5.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="4de2b4ed3445c37ec1720a7d214712e845a24636">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\okhttp-2.5.0_dcf5700bafee311c700ad34fa5535163185baf7d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\com.android.support-design-23.0.1_8f1a191b6431c1cf860c584863939a0eaba42499.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.0.1_ac50a5904963c424f6a9f40e84f36db1d4598fa7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\2.0.0-beta1\53b5be42d6cf719ac1431b9aa9a4d5ab78856148\retrofit-2.0.0-beta1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="53b5be42d6cf719ac1431b9aa9a4d5ab78856148">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\retrofit-2.0.0-beta1_bfbfac644280b88cb233dd818319bf046191b8bd.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\.gradle\caches\modules-2\files-2.1\org.immutables\gson\2.1.0.alpha\50de9aa0f76ca0b8f29f2cf943d4b92fdbc631e8\gson-2.1.0.alpha.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="50de9aa0f76ca0b8f29f2cf943d4b92fdbc631e8">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\gson-2.1.0.alpha_e39083142e79a9774247f38c04d97abc907486ab.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife\7.0.1\d5d13ea991eab0252e3710e5df3d6a9d4b21d461\butterknife-7.0.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\butterknife-7.0.1_69ed54e104c04af4a22124590f2128f4f35e4805.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\gson-2.3.1_2bc703afe1f7add226af7352859b308464d6762d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.1_5031793780bbd2374bfdfbf757f3479e3a5ef4ff.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\converter-gson\2.0.0-beta1\3de922cdbf9bb3a6f72f6b6b3327cfb348cf445a\converter-gson-2.0.0-beta1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3de922cdbf9bb3a6f72f6b6b3327cfb348cf445a">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\converter-gson-2.0.0-beta1_fb305bd7bb67f8cf9152e75b7c5fd9f271cb1f89.jar" />
+    </item>
+    <item
+        jar="C:\Users\Radek\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="C:\Users\Radek\Desktop\pharmaway\LivexPresentation\android\build\intermediates\pre-dexed\debug\okio-1.6.0_1bc29b93e17b5b073ce6521941bfaa5a22b0d3f5.jar" />
+    </item>
+
+</items>
